@@ -13,32 +13,30 @@ public class Main1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String[] names = {"Alice", "Bob", "Cathy", "Dave"};
-        long N = Long.valueOf(in.nextLine());
-        if(N <= 4){
-            System.out.println(names[toIntExact(N) - 1]);
-        }else {
-            int[] ret = helper(N);
-            double level = Math.pow(2, ret[0]);
-            int index = (int)(Math.ceil((double)ret[1]/level));
-            System.out.println(names[index - 1]);
+        int n = in.nextInt();
+        //基数为4
+        int base = 4;
+        int exp = 1;
+        while (n > base * exp){
+            //减去每一轮的人数，轮数递增，找出最后一轮退出
+            n = n - base * exp;
+            exp = exp * 2;
         }
+        int num = 0;
+        for (int i = 1; i < 5; i++) {
+            for (int j = 1; j < exp + 1; j++) {
+                num = num + 1;
+                //判断当前是谁在喝可乐
+                if(num == n)
+                    System.out.println(names[i - 1]);
 
-
-
-    }
-    public static int[] helper(long N){
-        int[] ret = new int[2];
-        for(int i = 0;;i++){
-            if(N > 4 * Math.pow(2, i)){
-                N -= 4 * Math.pow(2, i);
-            }else{
-                ret[0] = i;
-                ret[1] = toIntExact(N);
-                break;
             }
         }
-        return ret;
-    }
 
+
+
+
+
+    }
 
 }
