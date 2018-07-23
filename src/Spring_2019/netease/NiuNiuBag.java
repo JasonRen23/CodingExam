@@ -1,7 +1,8 @@
 package Spring_2019.netease;
 
 
-import helper.Pair;
+
+import Spring_2019.helper.Pair;
 
 import java.util.*;
 
