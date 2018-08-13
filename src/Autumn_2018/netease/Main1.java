@@ -2,30 +2,39 @@ package Autumn_2018.netease;
 
 import java.util.Scanner;
 
+/**
+ * 相反数
+ *
+ * 为了得到一个数的"相反数",我们将这个数的数字顺序颠倒,然后再加上原先的数得到"相反数"。例如,为了得到1325的"相反数",首先我们将该数的数字顺序颠倒,我们得到5231,之后再加上原先的数,我们得到5231+1325=6556.如果颠倒之后的数字有前缀零,前缀零将会被忽略。例如n = 100, 颠倒之后是1.
+ * 输入描述:
+ * 输入包括一个整数n,(1 ≤ n ≤ 10^5)
+ *
+ *
+ * 输出描述:
+ * 输出一个整数,表示n的相反数
+ *
+ * 输入例子1:
+ * 1325
+ *
+ * 输出例子1:
+ * 6556
+ */
 public class Main1 {
 
-	public static void main(String[] args) {
-		
-		Scanner in = new Scanner(System.in);
-        String str = in.nextLine();
-		int len=str.length();
-		char[] num = new char[len];
-		num = str.toCharArray();
-	
-		int[] sum =new int[100];
-        int ret = 1;
-		sum[0] = 1;
-		for (int i=1;i<len;i++){
-			if (num[i] != num[i-1])
-	       {
-	            sum[i]=sum[i-1]+1;
-	            ret=Math.max(ret,sum[i]);
-	         } else{
-	        	 sum[i]=1;
-	         }
-		}
-	       
-	        System.out.println(ret); 	
-	}
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int cn = 0;
+        int x = n;
+        while (x != 0) {
+            cn = cn * 10 + x % 10;
+            x /= 10;
+        }
+        System.out.println(n + cn);
+
+    }
+
 
 }
+
