@@ -10,10 +10,10 @@ import java.util.Scanner;
  * @email : zhicheng_ren@163.com
  */
 
- class Pair{
+ class Node {
     int power;
     int food;
-    Pair(int power, int food){
+    Node(int power, int food){
         this.power = power;
         this.food = food;
     }
@@ -21,9 +21,9 @@ import java.util.Scanner;
 
 
 
-class PairComparator implements Comparator<Pair> {
+class PairComparator implements Comparator<Node> {
 
-    public int compare(Pair o1, Pair o2) {
+    public int compare(Node o1, Node o2) {
         return o2.power - o1.power;
     }
 }
@@ -34,13 +34,13 @@ public class Main3 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int m = in.nextInt();
-        Pair[] bears = new Pair[n];
+        Node[] bears = new Node[n];
         int[] candy = new int[m];
         for (int i = 0; i < m; i++) {
             candy[i] = in.nextInt();
         }
         for (int i = 0; i < n; i++) {
-            bears[i] = new Pair(in.nextInt(), in.nextInt());
+            bears[i] = new Node(in.nextInt(), in.nextInt());
         }
 
         Arrays.sort(candy);
