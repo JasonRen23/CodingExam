@@ -1,11 +1,11 @@
-package Autumn_2019.baidu;
+package Autumn_2019.baidu_onsite_interview;
 
 /**
  * @author : JasonRen
  * @date : 2018/08/16
  * @email : zhicheng_ren@163.com
  */
-public class Test {
+public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
         //不在数组范围内
         if (target < arr[0] || target > arr[arr.length - 1]) {
@@ -25,13 +25,13 @@ public class Test {
             }
         }
 
-        //在数组范围内但是没有相等的数
-        if (target != arr[low + 1]) {
-            return -1;
-        }
-
-        return low + 1;
-
+//        //在数组范围内但是没有相等的数
+//        if (target != arr[low + 1]) {
+//            return -1;
+//        }
+//
+//        return low + 1;
+        return -1;
 
     }
 
