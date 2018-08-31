@@ -3,7 +3,7 @@
 //import java.io.File;
 //import java.util.Scanner;
 //
-//public class Main2 {
+//public class Main32 {
 //        // �ļ����ڵĲ���
 //        private int fileLevel;
 //
@@ -69,7 +69,7 @@
 //        }
 //
 //        public static void main(String[] args) {
-//                Main2 rd = new Main2();
+//                Main32 rd = new Main32();
 //                Scanner in =new Scanner(System.in);
 //            	String raw_N = String.valueOf(in.nextLine().trim());
 //            	File[] list = file.listFiles();

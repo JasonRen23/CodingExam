@@ -31,24 +31,6 @@ public class MergeSort<T extends Comparable<T>> extends Sort<T> {
 
     }
 
-//    @Override
-//    public void sort(T[] nums) {
-//        aux = (T[]) new Comparable[nums.length];
-//        sort(nums, 0, nums.length - 1);
-//    }
-//
-//    public void sort(T[] nums, int l, int h) {
-//        if (h <= l) {
-//            return;
-//        }
-//        int mid = l + (h - l) / 2;
-//        sort(nums, l, mid);
-//        sort(nums, mid + 1, h);
-//        if(nums[mid].compareTo(nums[mid + 1]) <= 0){
-//            return;
-//        }
-//        merge(nums, l, mid, h);
-//    }
 
 
     @Override
