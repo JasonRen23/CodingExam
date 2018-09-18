@@ -7,7 +7,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class NotInitialization {
     public static void main(String[] args) {
         System.out.println(SubClass.value);
-        ThreadPoolExecutor
     }
 }
 class SuperClass {
